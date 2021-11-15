@@ -14,5 +14,6 @@
 ### MySQL
 
 ## ER Diagram
+<img width="944" alt="er 다이어그램" src="https://user-images.githubusercontent.com/72954988/141737377-406f0c26-b31b-4aed-b190-70b737c76406.png">
 
 
