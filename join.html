@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<title> 회원가입 페이지</title>
+<br><br><br><br><br>
+<div style = "text-align: center;">
+<h1> 회원가입</h1><br>
+
+<script>
+    function test1(){
+        var p1 = document.getElementById('password1').value;
+        if (p1.length <6){
+            alert('입력한 글자가 6글자 이상이어야 합니다.');
+            return false;
+        }
+
+    }
+
+    function test2(){
+        var p1 = document.getElementById('password1').value;
+        var p2 = document.getElementById('password2').value;
+        if( p1 != p2){
+                alert('비밀번호가 일치하지 않습니다.');
+                return false;
+            }else{
+                alert('비밀번호가 일치합니다.');
+                return true;
+            }
+    
+    }
+</script>
+<body>
+    <div style = "text-align: center;">
+        <h3> * 필수 입력 정보</h3>
+        <tr>
+            <td >아이디 </td>
+            <td> <input type ="text">
+                <input type = "button" value = "아이디 중복확인">
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td> 비밀번호 </td>
+            <td> <input type ="password" id = "password1" onchange = "test1()"></td>
+        </tr>
+        <br>
+        <tr>
+            <td> 비밀번호 재확인 </td>
+            <td> <input type = "password" id = "password2" onchange = "test2()"> </td>
+        </tr>
+        <br>
+        <td> 이름 </td>
+        <td><input type  = "text"> </td>
+        <br>
+        <td> 성별 </td>
+        <td><input type = "radio" name = "gender">여성
+            <input type = "radio" name = "gender">남성
+        </td>
+
+        <br>
+        <tr>
+            <td> 전화번호 </td>
+            <td> <input type = "text" size = "4"> -
+                 <input type = "text" size = "4"> -
+                 <input type = "text" size = "4">
+            </td>
+        </tr>
+        <br>
+
+        <h3> *선택 입력 정보</h3>
+        <tr>
+            <td> 직업 </td>
+            <td><select>
+            <option> ==선택==</option>
+            <option>고등학생</option>
+            <option>대학생</option>
+            <option>대학원생</option>
+            <option>군인/경찰</option>
+            <option>공무원</option>
+            <option>영업직</option>
+            <option>자영업</option>
+            <option>기타</option>
+            </select></td>
+        </tr>
+        <br>
+        <br>
+        <tr>
+            <td colspan = "2">
+                <input type = "submit" value = "회원가입">
+                <input type = "reset" value = "취소">
+            </td>
+        </tr>
+    </div>
+</body>
+</html>
+
