@@ -37,6 +37,7 @@
 
 <body>
     <div align = "center">
+        <form name = "joinform" method = post></form>
         <table>
         <tr>
             <td> *필수 입력 정보 </td>
@@ -44,20 +45,20 @@
 
         <tr>
             <td >아이디 </td>
-            <td> <input type ="text" size = "15"></td>
+            <td> <input type ="text" name = "joinId" size = "15"></td>
             <td><input type = "button" value = "아이디 중복확인"></td>
         </tr>
         <tr>
             <td> 비밀번호 </td>
-            <td> <input type ="password" id = "password1" onchange = "test1()" size = "15"></td>
+            <td> <input type ="password" id = "password1" name = "joinpassword" onchange = "test1()" size = "15"></td>
         </tr>
         <tr>
             <td> 비밀번호 재확인 </td>
-            <td> <input type = "password" id = "password2" onchange = "test2()" size = "15"> </td>
+            <td> <input type = "password" id = "password2" name = "joinpasswordcheck" onchange = "test2()" size = "15"> </td>
         </tr>
         <tr>
             <td> 이름 </td>
-            <td><input type  = "text" size = "15"> </td>
+            <td><input type  = "text" name = "joinName" size = "15"> </td>
         </tr>
         <tr>
             <td> 성별 </td>
@@ -67,9 +68,9 @@
         </tr>
         <tr>
             <td> 전화번호 </td>
-            <td colspan = "2"> <input type = "text" size = "3" > - 
-             <input type = "text" size = "3"> - 
-             <input type = "text" size = "3"></td>
+            <td colspan = "2"> <input type = "text" name = "phone1" size = "3" > - 
+             <input type = "text" name = "phone2" size = "3"> - 
+             <input type = "text" name = "phone3" size = "3"></td>
         </tr>
  
         <tr><td></td></tr>
@@ -97,12 +98,13 @@
             <td></td>
         </tr>
             <td colspan = "2">
-                <input type = "submit" value = "회원가입"style = "padding: 10px 40px 10px 40px" >
-                <input type = "reset" value = "취소"style = "padding: 10px 40px 10px 40px" >
+                <input type = "submit" value = "회원가입" style = "padding: 10px 40px 10px 40px" >
+                <input type = "reset" value = "취소"  onClick ="location.href = 'mainpage.html'"style = "padding: 10px 40px 10px 40px" >
             </td>
         </tr>
 
     </table>
+    </form>
     </div>
 </body>
 </html>
