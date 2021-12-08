@@ -1,28 +1,62 @@
 <!DOCTYPE html>
 <html>
-    <title> Login Page</title>
-    <head>
-        <br><br><br><br><br>
-        <div style = "text-align: center;">
-        <h1> Login</h1><br>
-        </div>
-    </head>
-    <body>
-        <form action="login_check.php" method = "POST">
-            <div style = "text-align: center;">
-            ID  <input type="text" name="loginid" placeholder="아이디를 입력하세요"
-                maxlength =20 size =20> <br>
-            PW <input type="password" name = "loginpassword" maxlength = 20 size = 20><br>
-            아이디 저장 <input type="checkbox" >
-            <p>
-                <input type = "submit" value = "로그인" style="height:50px;width:300px;">
-                <br><br>
-                <input type = "button" value = "회원가입" onClick= "location.href='join.html';" style="height:50px;width:100px;">
-                <input type = "button" value = "아이디 찾기" style="height:50px;width:100px;">
-                <input type = "button" value = "비밀번호 찾기" style="height:50px;width:100px;">
-                </div>
-               
-            </p>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/template.css">
+</head>
+
+<body>
+    <h1>
+        <a href="home.html" class="title">
+            성공을 나누는 스터디룸🍀
+        </a>
+    </h1>
+    <ul class="tab-menu">
+        <li class="tab-menu-item">
+            <a href="home.html">
+                HOME
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="login.html" class="now">
+                로그인
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="reserve.html">
+                예약하기
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="reserve_info.html">
+                예약현황
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="../php/logout.php">
+                로그아웃
+            </a>
+        </li>
+    </ul>
+
+    <div class="login-form">
+        <div class="login-title">로그인</div>
+        <form action="../php/login_check.php" method="POST">
+            <input type="text" placeholder="아이디를 입력하세요" name="loginid" maxlength=20 size=20 />
+            <input type="password" placeholder="비밀번호를 입력하세요" name="loginpassword" maxlength=20 size=20 />
+            <input type="submit" value="로그인">
+            <div class="buttons">
+                <input type="button" value="회원가입" onClick="location.href='join.html';">
+                <input type="button" value="아이디 찾기">
+                <input type="button" value="비밀번호 찾기">
+            </div>
         </form>
-    </body>
+    </div>
+
+</body>
+
 </html>

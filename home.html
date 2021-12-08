@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>스터디룸</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/template.css">
+</head>
+
+<body>
+    <h1>
+        <a href="home.html" class="title">
+            성공을 나누는 스터디룸🍀
+        </a>
+    </h1>
+    <ul class="tab-menu">
+        <li class="tab-menu-item">
+            <a href="home.html" class="now">
+                HOME
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="login.html">
+                로그인
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="reserve.html">
+                예약하기
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="reserve_info.html">
+                예약현황
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="../php/logout.php">
+                로그아웃
+            </a>
+        </li>
+    </ul>
+
+    <span class="room-note">
+        - 외부 음료와 음식물 반입을 금지합니다.<br>
+        - 복사, 출력 가능합니다 (흑백 면당 100원, 칼라 면당 300원)<br>
+        - 중앙 냉난방이 아닌 개별 냉난방으로 각 룸별로 직접 온도 조절 가능합니다.<br>
+    </span>
+
+    <div class="room-info">
+        <?php include "../php/room_info.php" ?>
+    </div>
+
+</body>
+
+</html>

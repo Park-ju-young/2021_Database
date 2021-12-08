@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예약 현황</title>
+    <link rel="stylesheet" href="../css/template.css">
+    <link rel="stylesheet" href="../css/reserve_info.css">
+</head>
+
+<body>
+
+    <h1>
+        <a href="home.html" class="title">
+            성공을 나누는 스터디룸🍀
+        </a>
+    </h1>
+    <ul class="tab-menu">
+        <li class="tab-menu-item">
+            <a href="home.html">
+                HOME
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="login.html">
+                로그인
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="reserve.html">
+                예약하기
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="reserve_info.html" class="now">
+                예약현황
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="../php/logout.php">
+                로그아웃
+            </a>
+        </li>
+    </ul>
+
+    <div class="reserved-form">
+        <div class="reserved-title">예약 현황</div>
+        <form action="../php/reserve_cancel.php" name="reserved-info" method="POST">
+            <input type="date" name="cancel_date" placeholder="날짜">
+            <input type="time" name="cancel_start_time" placeholder="시간">
+            <input type="submit" value="취소">
+            <div class="room-info">
+                <?php include "../php/reserve_info.php" ?>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

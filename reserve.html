@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예약하기</title>
+    <link rel="stylesheet" href="../css/reserve.css">
+    <link rel="stylesheet" href="../css/template.css">
+</head>
+
+<body>
+    <h1>
+        <a href="home.html" class="title">
+            성공을 나누는 스터디룸🍀
+        </a>
+    </h1>
+    <ul class="tab-menu">
+        <li class="tab-menu-item">
+            <a href="home.html">
+                HOME
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="login.html">
+                로그인
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="reserve.html" class="now">
+                예약하기
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="reserve_info.html">
+                예약현황
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="../php/logout.php">
+                로그아웃
+            </a>
+        </li>
+    </ul>
+
+    <div class="reserve-form">
+        <div class="reserve-title">예약</div>
+        <form action="../php/reserve.php" name="reserve" method="POST">
+            <label for="currentDate">예약 날짜 </label>
+            <input type="date" id="currentDate" name="currentDate">
+
+            <label for="currentTime">예약 시간 </label>
+            <input type="time" id="currentTime" name="currentTime">
+
+            <label for="currentNum">방 번호 </label>
+            <input type="text" id="currentNum" name="currentNum">
+
+            <label for="time">이용시간 </label>
+            <input type="text" id="time" name="time">
+
+
+            <label for="currentPerson">인원수</label>
+            <select name="person" id="currentPerson">
+                <option>== 인원 수 ==</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+            </select>
+
+
+            <p>
+                <strong>예약시 주의사항</strong><br>
+                1. 외부 음식은 반입이 불가합니다.<br>
+                2. 해당 공간은 코로나 바이러스 예방을 위해 매 사용마다 소독을 진행하고 있습니다.<br />
+                3. 필요한 장비가 있으신 분들은 <strong>최소 하루</strong> 전에 문의 글을 남겨주세요.
+            </p>
+
+            <input type="submit" value="예약하기" />
+        </form>
+
+
+    </div>
+
+
+
+    <!-- <script>
+        document.getElementById('currentDate').valueAsDate = new Date();
+
+        현재 날짜 수정해야함 -> toisostring은 한국이랑 단위가 달라
+        document.getElementById('currentTime').value = new Date().toISOString().slice(11, 16);
+    </script> -->
+
+</body>
+
+</html>

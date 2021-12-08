@@ -1,111 +1,110 @@
+<!-- 성별- > 라디오박스로
+전화번호 -> 그냥 전체 저장하면 안되는건가?
+선호하는 방이랑 예약한 방이랑 다른거쟈나
+ -->
 <!DOCTYPE html>
 <html>
-<title> 회원가입 페이지</title>
-<div style = "text-align: center;">
-<h1> 회원가입</h1>
-<script>
-    function test1(){
-        var p1 = document.getElementById('password1').value;
-        if (p1.length <6){
-            alert('입력한 글자가 6글자 이상이어야 합니다.');
-            return false;
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function test1() {
+            var p1 = document.getElementById('password1').value;
+            if (p1.length < 6) {
+                alert('입력한 글자가 6글자 이상이어야 합니다.');
+                return false;
+            }
+
         }
 
-    }
-
-    function test2(){
-        var p1 = document.getElementById('password1').value;
-        var p2 = document.getElementById('password2').value;
-        if( p1 != p2){
+        function test2() {
+            var p1 = document.getElementById('password1').value;
+            var p2 = document.getElementById('password2').value;
+            if (p1 != p2) {
                 alert('비밀번호가 일치하지 않습니다.');
                 return false;
-            }else{
+            } else {
                 alert('비밀번호가 일치합니다.');
                 return true;
             }
-    
-    }
-</script>
 
-<style>
-    td{
-        width:120px;
-        padding: 5px 0px 5px 0px;
-    }
-    
-</style>
+        }
+    </script>
+    <title> 회원가입</title>
+    <link rel="stylesheet" href="../css/template.css">
+    <link rel="stylesheet" href="../css/join.css">
+</head>
 
 <body>
-    <div align = "center">
-        <form action = "user.php" name = "joinform" method = "POST">
-        <table>
-        <tr>
-            <td> *필수 입력 정보 </td>
-        </tr>
+    <h1>
+        <a href="home.html" class="title">
+            성공을 나누는 스터디룸🍀
+        </a>
+    </h1>
+    <ul class="tab-menu">
+        <li class="tab-menu-item">
+            <a href="home.html">
+                HOME
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="login.html">
+                로그인
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="reserve.html">
+                예약하기
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="reserve_info.html">
+                예약현황
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="../php/logout.php">
+                로그아웃
+            </a>
+        </li>
+    </ul>
 
-        <tr>
-            <td >아이디 </td>
-            <td> <input type ="text" name = "joinId" size = "15"></td>
-            <td><input type = "button" value = "아이디 중복확인"></td>
-        </tr>
-        <tr>
-            <td> 비밀번호 </td>
-            <td> <input type ="password" id = "password1" name = "joinpassword" onchange = "test1()" size = "15"></td>
-        </tr>
-        <tr>
-            <td> 비밀번호 재확인 </td>
-            <td> <input type = "password" id = "password2" name = "joinpasswordcheck" onchange = "test2()" size = "15"> </td>
-        </tr>
-        <tr>
-            <td> 이름 </td>
-            <td><input type  = "text" name = "joinName" size = "15"> </td>
-        </tr>
-        <tr>
-            <td> 성별 </td>
-            <td><input type = "radio" name = "gender">여성
-                <input type = "radio" name = "gender">남성
-            </td>
-        </tr>
-        <tr>
-            <td> 전화번호 </td>
-            <td colspan = "2"> <input type = "text" name = "phone1" size = "3" > - 
-             <input type = "text" name = "phone2" size = "3"> - 
-             <input type = "text" name = "phone3" size = "3"></td>
-        </tr>
- 
-        <tr><td></td></tr>
+    <div class="join-form">
+        <div class="join-title">회원가입</div>
+        <form action="../php/join.php" name="joinform" method="POST">
 
-        <tr>
-            <td colspan = "3"> *선택 입력 정보</td>
-        </tr>
+            <div class="join-subtitle">*필수입력항목</div>
 
-        <tr>
-            <td> 직업 </td>
-            <td><select>
-            <option> ===선택===</option>
-            <option>고등학생</option>
-            <option>대학생</option>
-            <option>대학원생</option>
-            <option>군인/경찰</option>
-            <option>공무원</option>
-            <option>영업직</option>
-            <option>자영업</option>
-            <option>기타</option>
-            </select></td>
-        </tr>
-        <tr>
-        <tr>
-            <td></td>
-        </tr>
-            <td colspan = "2">
-                <input type = "submit" value = "회원가입" style = "padding: 10px 40px 10px 40px" >
-                <input type = "reset" value = "취소"  onClick ="location.href = 'mainpage.html'"style = "padding: 10px 40px 10px 40px" >
-            </td>
-        </tr>
+            <input type="text" placeholder="아이디" name="joinId">
+            <input type="password" placeholder="비밀번호 (영문,숫자, 특수문자 8-20자)" id="password1" name="joinpassword"
+                onchange="test1()">
+            <input type="password" placeholder="비밀번호 확인" id="password2" name="joinpasswordcheck" onchange="test2()">
+            <input type="text" placeholder="이름" name="joinName">
+            <span class="sex">
+                <input type="radio" name="gender" value="man" id="gender">
+                <label for="gender">남</label>
+                <input type="radio" name="gender" value="woman" id="gender">
+                <label for="gender">여</label>
+            </span>
 
-    </table>
-    </form>
+            <input type="text" placeholder="선호하는 방 (1~6)" name="room_num">
+            <input type="tel" placeholder="전화번호 (-없이 입력)" name="phone">
+
+            <div class="join-subtitle">*선택입력항목</div>
+            <select name="" id="job">
+                <option>== 직업 ==</option>
+                <option>고등학생</option>
+                <option>대학생</option>
+                <option>대학원생</option>
+                <option>군인/경찰</option>
+                <option>공무원</option>
+                <option>영업직</option>
+                <option>자영업</option>
+                <option>기타</option>
+            </select>
+            <input type="submit" value="회원가입">
+        </form>
     </div>
 </body>
-</html>
 
+</html>

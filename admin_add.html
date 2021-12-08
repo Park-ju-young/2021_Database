@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방 정보 등록</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/template.css">
+    <link rel="stylesheet" href="../css/admin_add.css">
+</head>
+
+<body>
+    <h1>
+        <a href="home.html" class="title">
+            성공을 나누는 스터디룸🍀
+        </a>
+    </h1>
+    <ul class="tab-menu">
+        <li class="tab-menu-item">
+            <a href="admin_home.html">
+                HOME
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="admin_add.html" class="now">
+                방 정보 등록
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="admin_delete.html">
+                방 정보 삭제
+            </a>
+        </li>
+        <li class="tab-menu-item">
+            <a href="admin_reserved.html">
+                예약현황
+            </a>
+        </li>
+        <li class="tab-menu-item" id="logout">
+            <a href="../php/logout.php">
+                로그아웃
+            </a>
+        </li>
+    </ul>
+
+    <div class="add-form">
+        <div class="add-title">방 정보 등록</div>
+        <form action="../php/admin_add.php" name="room_add" method="POST">
+            <input type="text" name="room_num" placeholder="방 번호">
+            <input type="text" name="room_person" placeholder="인실">
+            <input type="text" name="room_money" placeholder="시간 당 가격">
+            <input type="submit" value="등록하기">
+        </form>
+    </div>
+
+</body>
+
+</html>
